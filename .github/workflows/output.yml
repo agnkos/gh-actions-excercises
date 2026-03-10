@@ -1,8 +1,10 @@
 name: Output information
-on: workflow_dispatch
+on:
+  issues:
+    types: [opened]
 jobs:
   info:
     runs-on: windows-latest
     steps:
-      - name: Output Issues info
-        run: echo "${{ toJSON(issues) }}"
+      - name: Output github context
+        run: echo "${{ toJSON(github.issues) }}"
