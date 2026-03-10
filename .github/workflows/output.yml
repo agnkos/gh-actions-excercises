@@ -7,4 +7,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Output github context
-        run: echo "${{ toJSON(github.issues) }}"
+        run: echo "${{ toJSON(github.event.issue) }}"
