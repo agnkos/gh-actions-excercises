@@ -1,0 +1,8 @@
+name: Output information
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: windows-latest
+    steps:
+      - name: Output Issues info
+        run: echo "${{ toJSON(issues) }}"
